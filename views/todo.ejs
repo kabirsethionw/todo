@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-1.12.4.js" 
+			integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" 
+			crossorigin="anonymous">
+		</script>
+		<link href="/assets/style_todo.css" rel="stylesheet" type="text/css" /> 
+		<script src="/assets/todo_list.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<h2>Coco's Todo List</h2><h1>Coco's To-do List<br><br><br><br><br> </h1>
+		<br>
+		<div id="todo-table">
+			<form method="POST">
+				<input type="text" name="item" placeholder="Add new item..." required />
+				<button type="submit">Add item</button>
+			</form>
+			<ul>
+				<% todos.forEach((y)=>{ %>
+					<li><%= y.item %></li>
+				<% }); %>
+			</ul>
+		</div>
+	
+	</body>
+</html>
